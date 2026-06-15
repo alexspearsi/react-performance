@@ -1,4 +1,4 @@
-import { useMemo } from 'react';
+import { memo, useMemo } from 'react';
 import { List, type RowComponentProps } from 'react-window';
 import type { Country } from '../../types';
 import { CountryCard } from '../country-card/country-card';
@@ -35,7 +35,7 @@ const Row = ({ index, style, countries, selectedYear, selectedColumns }: RowComp
   </div>
 );
 
-export const CountryList = ({
+export const CountryList = memo(({
   countries,
   searchQuery,
   selectedColumns,
@@ -73,4 +73,6 @@ export const CountryList = ({
       className={styles.countryList}
     />
   );
-};
+});
+
+CountryList.displayName = 'CountryList';
