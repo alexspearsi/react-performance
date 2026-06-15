@@ -1,3 +1,7 @@
 .countryList {
-  padding: 16px;
+  height: 800px;
+}
+
+.row {
+  padding: 0 16px;
 }
